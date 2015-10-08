@@ -61,7 +61,7 @@ def download_topic(url):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="TODO",
+        description="Yahoo! Groups! Scraper!",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument(
         '-s', '--start_url',
