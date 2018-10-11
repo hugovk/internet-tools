@@ -1,4 +1,5 @@
 language: python
+cache: pip
 
 python:
  - pypy
@@ -7,19 +8,16 @@ python:
  - 2.7
  - 3.5
  - 3.4
- - 3.3
- - 3.2
- - 2.6
 
 sudo: false
 
 install:
- - pip install pep8 pyflakes
+ - pip install -U pip
+ - pip install -U flake8
 
 script:
  # Pretend tests
- - pep8 --statistics --count .
- - pyflakes .
+ - flake8 --statistics --count .
 
 matrix:
   fast_finish: true
